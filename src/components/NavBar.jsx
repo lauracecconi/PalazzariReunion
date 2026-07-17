@@ -22,7 +22,7 @@ export default function NavBar({ page, setPage }) {
           }}
           className="font-display italic text-xl sm:text-2xl text-tomato font-semibold tracking-tight"
         >
-          Palazzari <span className="text-ink not-italic font-normal text-base sm:text-lg">Reunion &apos;26</span>
+          Palazzari <span className="text-ink not-italic font-normal text-base sm:text-lg">Reunion &apos;27</span>
         </button>
 
         {/* Desktop nav */}
