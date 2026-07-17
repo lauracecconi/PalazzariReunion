@@ -1,8 +1,5 @@
 import React from 'react';
-
-function StampBadge({ children, color = 'text-tomato' }) {
-  return <span className={`postmark ${color}`}>{children}</span>;
-}
+import StampBadge from '../components/StampBadge.jsx';
 
 export default function Home({ setPage }) {
   return (
