@@ -6,6 +6,7 @@ import DinnerRSVP from './pages/DinnerRSVP.jsx';
 import TShirtOrder from './pages/TShirtOrder.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Recipes from './pages/Recipes.jsx';
+import Organizers from './pages/Organizers.jsx';
 
 export default function App() {
   const [page, setPage] = useState('home');
@@ -20,9 +21,17 @@ export default function App() {
         {page === 'tshirts' && <TShirtOrder />}
         {page === 'gallery' && <Gallery />}
         {page === 'recipes' && <Recipes />}
+        {page === 'organizers' && <Organizers />}
       </main>
       <footer className="border-t-2 border-ink/10 py-8 text-center text-sm text-ink/60 font-body">
-        Con affetto, la famiglia Palazzari &middot; York Beach, Maine &middot; Summer 2026
+        Con affetto, la famiglia Palazzari &middot; York Beach, Maine &middot; Summer 2027
+        <br />
+        <button
+          onClick={() => setPage('organizers')}
+          className="text-xs text-ink/30 hover:text-ink/50 mt-2 inline-block"
+        >
+          Organizers
+        </button>
       </footer>
     </div>
   );

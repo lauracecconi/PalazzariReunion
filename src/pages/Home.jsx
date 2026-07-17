@@ -9,7 +9,7 @@ export default function Home({ setPage }) {
     <div>
       {/* Draft notice */}
       <div className="bg-limoncello/25 border-b-2 border-limoncello/60 text-center py-2 px-4 text-sm font-body font-bold text-ink">
-        🚧 Details still being finalized — dates and pricing TBD. Not final yet!
+        🚧 Dates are locked in — a few other details (final pricing, exact dinner order) still being finalized.
       </div>
 
       {/* Hero */}
@@ -19,8 +19,8 @@ export default function Home({ setPage }) {
           Buongiorno,<br />Famiglia!
         </h1>
         <p className="font-body text-lg sm:text-xl text-ink/80 mt-6 max-w-2xl mx-auto">
-          The Palazzari family is heading to the Maine coast — beginning of August (dates coming soon).
-          Sun, sand, pasta, and way too many cousins in one place. Ci vediamo presto!
+          The Palazzari family is heading to the Maine coast — <strong>August 8th&ndash;12th, 2027</strong>.
+          Sun, sand, pizza, and way too many cousins in one place. Ci vediamo presto!
         </p>
         <div className="flex flex-wrap gap-3 justify-center mt-9">
           <button
@@ -55,7 +55,7 @@ export default function Home({ setPage }) {
             <p className="text-ink/70 text-sm mt-2">Arrival — no dinner planned. Grab a bite on your own and settle in.</p>
           </div>
           <div className="paper-card rounded-2xl p-5">
-            <p className="font-display font-semibold text-lg text-ink">Pasta Night</p>
+            <p className="font-display font-semibold text-lg text-ink">Pizza Night</p>
             <p className="text-ink/70 text-sm mt-2">One of our two group dinner nights — included, no extra cost.</p>
           </div>
           <div className="paper-card rounded-2xl p-5">
@@ -68,7 +68,7 @@ export default function Home({ setPage }) {
           </div>
         </div>
         <p className="text-ink/60 text-sm mt-4 italic">
-          Exact order of pasta night vs. lobster bake still to be worked out once dates are set.
+          Exact order of Pizza Night vs. Lobster Bake still being worked out.
         </p>
       </section>
 
@@ -98,15 +98,15 @@ export default function Home({ setPage }) {
         <StampBadge color="text-limoncello">Dates</StampBadge>
         <div className="paper-card rounded-2xl p-6 mt-6">
           <p className="text-ink/80">
-            Aiming for <strong>beginning of August</strong> — exact dates aren't locked in yet. A couple of things
-            that affect cost:
+            The reunion is set for <strong>August 8th–12th, 2027</strong>. A couple of things
+            affect cost depending on how your own stay lines up:
           </p>
           <ul className="mt-3 space-y-2 text-ink/80">
             <li className="flex gap-2"><span className="text-tomato font-bold">•</span> Thursday through Monday raises the cost.</li>
             <li className="flex gap-2"><span className="text-basil font-bold">•</span> Sunday through Thursday (skipping Saturday) keeps cost lower.</li>
           </ul>
           <p className="text-ink/60 text-sm mt-4 italic">
-            Once dates are settled, Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
+            Now that dates are set, Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
             more on that on the Accommodations page.
           </p>
         </div>

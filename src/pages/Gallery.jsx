@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Fill in once you create the shared Drive folder (see setup notes below).
-const DRIVE_FOLDER_ID = 'PASTE_DRIVE_FOLDER_ID_HERE';
+const DRIVE_FOLDER_ID = '1Wfcko6_MF0br7UFzs_-UoYFuX1QIDIeI';
 const isConfigured = !DRIVE_FOLDER_ID.startsWith('PASTE');
 
 export default function Gallery() {

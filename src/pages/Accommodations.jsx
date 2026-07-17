@@ -1,5 +1,14 @@
 import React from 'react';
 
+const IN_YORK = [
+  { name: 'Nubble Lighthouse (Sohier Park)', blurb: 'One of the most photographed lighthouses in New England — a must for photos.', lat: 43.1652754, lng: -70.5911456 },
+  { name: 'The Goldenrod', blurb: 'York Beach institution since 1896 — watch saltwater taffy pulled right in the window.', lat: 43.1755217, lng: -70.6104495 },
+  { name: "York's Wild Kingdom", blurb: 'A small zoo and amusement park — butterfly house, animals, mini golf, rides for the kids.', lat: 43.1809336, lng: -70.6265752 },
+  { name: 'Fun-O-Rama Arcade', blurb: 'Classic old-school arcade right off Short Sands Beach.', lat: 43.1757039, lng: -70.6094635 },
+  { name: 'Mount Agamenticus', blurb: 'Easy family hike with ocean views on one side, White Mountains on the other.', lat: 43.2225654, lng: -70.6923194 },
+  { name: "Fox's Lobster House", blurb: 'Right at Nubble Point — lobster rolls with a lighthouse view.', lat: 43.1660008, lng: -70.5940271 },
+];
+
 const NEARBY = [
   { name: 'Ogunquit Beach', time: '14 min', dir: 'north', lat: 43.2468352, lng: -70.5986223 },
   { name: 'Kennebunkport (cute downtown, Bush family home)', time: '30 min', dir: 'north', lat: 43.3617264, lng: -70.4767957 },
@@ -71,9 +80,12 @@ export default function Accommodations() {
         <div className="paper-card rounded-2xl p-5 mt-4">
           <p className="text-ink/80">
             Rooms run roughly <strong>$364</strong> (one bed) up to <strong>$644</strong> (multi-bedroom cottage),
-            depending on dates and room type. We're waiting to hear if a group discount is possible given the number
-            of rooms we'd be booking. <strong>Check the website for exact rooms and current pricing</strong> —
+            depending on dates and room type. <strong>Check the website for exact rooms and current pricing</strong> —
             it changes by season and room type.
+          </p>
+          <p className="text-basil font-bold mt-3">
+            🎉 Confirmed: The Ocean Sands is giving our group a 10% discount when you call in to book — just
+            mention you're with the Palazzari Reunion.
           </p>
           <a
             href="https://www.oceansandsyorkbeach.com/"
@@ -119,6 +131,25 @@ export default function Accommodations() {
               className="paper-card rounded-xl p-4 text-sm font-bold text-ink hover:bg-tomato hover:text-parchment transition"
             >
               📍 {spot.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Right in York */}
+      <div className="mt-12">
+        <span className="postmark text-tomato">Right in York — No Driving Required</span>
+        <div className="grid sm:grid-cols-2 gap-3 mt-5">
+          {IN_YORK.map((spot) => (
+            <a
+              key={spot.name}
+              href={mapsLink(spot.lat, spot.lng)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="paper-card rounded-xl p-4 hover:bg-ink/5 transition"
+            >
+              <p className="font-body font-bold text-sm">📍 {spot.name}</p>
+              <p className="text-xs text-ink/60 mt-1">{spot.blurb}</p>
             </a>
           ))}
         </div>
