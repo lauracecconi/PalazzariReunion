@@ -5,8 +5,8 @@ const TSHIRT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdbmX6JWgqyjY-
 const TSHIRT_FORM_ENTRIES = {
   lastName: 'entry.1657202184',
   firstName: 'entry.1831017839',
-  size: 'entry.534534677',
-  quantity: 'entry.395871381',
+  quantity: 'entry.534534677',
+  size: 'entry.395871381',
 };
 
 const tshirtConfigured = !TSHIRT_FORM_URL.startsWith('PASTE');
