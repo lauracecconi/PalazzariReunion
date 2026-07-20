@@ -89,7 +89,7 @@ const CURATED_RECIPES = [
           'Add the cheese mixture and mix, adding stock until the consistency is rollable into balls. Taste and adjust seasoning.',
           'Divide the meat mixture into two bowls - a larger one for ravioli and a smaller one for cappelletti.',
           'For the ravioli bowl only: mix in the spinach and breadcrumbs, then cover and refrigerate.',
-          'Video Instruction:  https://drive.google.com/file/d/1WDoyKgOGIXa5AHrc5MxpQWXsVskwBQf7/view?usp=sharing"
+          'Video Instruction:  https://drive.google.com/file/d/1WDoyKgOGIXa5AHrc5MxpQWXsVskwBQf7/view?usp=sharing',
         ],
       },
       {
