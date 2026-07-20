@@ -5,10 +5,11 @@ function StampBadge({ children, color = 'text-tomato' }) {
 }
 
 // Fill these in once the Google Form is created (see setup notes below).
-const VOLUNTEER_FORM_URL = 'PASTE_VOLUNTEER_FORM_URL_HERE';
+const VOLUNTEER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe5oNU1UluaXv9_rfkH_qIXXlBPtgB8qNhZSm7w_ZcTJXLMgA/viewform?usp=publish-editor';
 const VOLUNTEER_FORM_ENTRIES = {
-  name: 'PASTE_NAME_ENTRY_ID_HERE',
-  message: 'PASTE_MESSAGE_ENTRY_ID_HERE',
+  name: 'entry.1927771640',
+  message: 'entry.794936153',
+  contact: 'entry.29485194',
 };
 
 const volunteerConfigured = !VOLUNTEER_FORM_URL.startsWith('PASTE');
@@ -33,6 +34,7 @@ function VolunteerSignup() {
         const body = new URLSearchParams({
           [VOLUNTEER_FORM_ENTRIES.name]: name,
           [VOLUNTEER_FORM_ENTRIES.message]: message,
+          [VOLUNTEER_FORM_ENTRIES.contact]: contact,
         });
         await fetch(VOLUNTEER_FORM_URL, {
           method: 'POST',
