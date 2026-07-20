@@ -84,6 +84,14 @@ function VolunteerSignup() {
         className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil"
         placeholder="An activity idea, help organizing something, day-of setup, whatever it is!"
       />
+      <label className="block text-sm font-bold text-ink mb-1">Contact Information</label>
+      <textarea
+        value={contact}
+        onChange={(e) => setMessage(e.target.value)}
+        rows={3}
+        className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil"
+        placeholder="Email, Phone Number"
+      />
       {error && <p className="text-tomato text-sm font-bold mt-3">{error}</p>}
       <button
         type="button"
