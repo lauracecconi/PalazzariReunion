@@ -75,6 +75,7 @@ const CURATED_RECIPES = [
           'Strain off the drippings into a pot and freeze for 1 hour to separate the fat, then skim the fat off the top. Save the rest as stock.',
           'Once cooked, pull the meat apart into tiny pieces, removing any fat. Keep it in the original pan - do not wash the pan.',
           'Crumble in 1/2 sleeve of saltines or 1-2 slices of bread.',
+          'Video Instructions:  https://drive.google.com/file/d/1ec9FrQnQcSHlWFkyALGV6iKJbBbx_4Qi/view?usp=sharing',
         ],
       },
       {
@@ -88,6 +89,7 @@ const CURATED_RECIPES = [
           'Add the cheese mixture and mix, adding stock until the consistency is rollable into balls. Taste and adjust seasoning.',
           'Divide the meat mixture into two bowls - a larger one for ravioli and a smaller one for cappelletti.',
           'For the ravioli bowl only: mix in the spinach and breadcrumbs, then cover and refrigerate.',
+          'Video Instruction:  https://drive.google.com/file/d/1WDoyKgOGIXa5AHrc5MxpQWXsVskwBQf7/view?usp=sharing"
         ],
       },
       {
@@ -100,6 +102,7 @@ const CURATED_RECIPES = [
           'Cut into 4 sections and knead each into a smooth ball, like pizza dough.',
           'Cover in an oiled bowl with a towel. Refrigerate overnight if not using the same day.',
           'Roll each section into an oval with a rolling pin, then run through the pasta machine starting at the widest setting, moving in two notches at a time.',
+          'Video Instruction:  https://drive.google.com/file/d/1i7f1JnHvCVfnriSCpkTxeq_OEz6PEGwe/view?usp=sharing',
         ],
       },
       {
