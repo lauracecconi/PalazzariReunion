@@ -5,7 +5,7 @@ function StampBadge({ children, color = 'text-tomato' }) {
 }
 
 // Fill these in once the Google Form is created (see setup notes below).
-const VOLUNTEER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe5oNU1UluaXv9_rfkH_qIXXlBPtgB8qNhZSm7w_ZcTJXLMgA/viewform?usp=publish-editor';
+const VOLUNTEER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe5oNU1UluaXv9_rfkH_qIXXlBPtgB8qNhZSm7w_ZcTJXLMgA/formResponse';
 const VOLUNTEER_FORM_ENTRIES = {
   name: 'entry.1927771640',
   message: 'entry.794936153',
@@ -17,6 +17,7 @@ const volunteerConfigured = !VOLUNTEER_FORM_URL.startsWith('PASTE');
 function VolunteerSignup() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [contact, setContact] = useState('');
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -81,13 +82,14 @@ function VolunteerSignup() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         rows={3}
-        className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil"
+        className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil mb-4"
         placeholder="An activity idea, help organizing something, day-of setup, whatever it is!"
       />
       <label className="block text-sm font-bold text-ink mb-1">Contact Information</label>
       <textarea
         value={contact}
-        onChange={(e) => setMessage(e.target.value)}
+        onChange={(e) => setContact(e.target.value)}
+        rows={2}
         className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil"
         placeholder="Email, Phone Number"
       />
