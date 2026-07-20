@@ -152,7 +152,7 @@ export default function DinnerRSVP() {
             <div className="flex items-center justify-between border-2 border-ink/10 rounded-xl p-4 mb-3">
               <div>
                 <p className="font-bold text-sm">Pizza Night</p>
-                <p className="text-xs text-ink/60">No additional cost</p>
+                <p className="text-xs text-ink/60">Group order from a local pizzeria — cost per person applies</p>
               </div>
               <input
                 type="checkbox"

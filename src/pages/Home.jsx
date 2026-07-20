@@ -1,7 +1,98 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function StampBadge({ children, color = 'text-tomato' }) {
   return <span className={`postmark ${color}`}>{children}</span>;
+}
+
+// Fill these in once the Google Form is created (see setup notes below).
+const VOLUNTEER_FORM_URL = 'PASTE_VOLUNTEER_FORM_URL_HERE';
+const VOLUNTEER_FORM_ENTRIES = {
+  name: 'PASTE_NAME_ENTRY_ID_HERE',
+  message: 'PASTE_MESSAGE_ENTRY_ID_HERE',
+};
+
+const volunteerConfigured = !VOLUNTEER_FORM_URL.startsWith('PASTE');
+
+function VolunteerSignup() {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!name || !message) {
+      setError('Please fill in your name and a note about how you\'d like to help');
+      return;
+    }
+    setError('');
+    setSaving(true);
+
+    if (volunteerConfigured) {
+      try {
+        const body = new URLSearchParams({
+          [VOLUNTEER_FORM_ENTRIES.name]: name,
+          [VOLUNTEER_FORM_ENTRIES.message]: message,
+        });
+        await fetch(VOLUNTEER_FORM_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+      } catch (err) {
+        // Don't block on a network hiccup
+      }
+    }
+
+    setSaving(false);
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="paper-card rounded-2xl p-6 mt-6 text-center">
+        <div className="text-4xl mb-2">🙌</div>
+        <p className="font-display font-semibold text-lg text-basil">Grazie mille!</p>
+        <p className="text-ink/70 text-sm mt-1">We've got your note and will be in touch.</p>
+        {!volunteerConfigured && (
+          <p className="text-xs text-ink/40 mt-4">
+            (Dev note: VOLUNTEER_FORM_URL isn't configured yet, so this submission wasn't actually saved anywhere.)
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="paper-card rounded-2xl p-6 mt-6">
+      <label className="block text-sm font-bold text-ink mb-1">Your Name</label>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil mb-4"
+        placeholder="e.g. Maria Palazzari"
+      />
+      <label className="block text-sm font-bold text-ink mb-1">Have an idea, or want to help?</label>
+      <textarea
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        rows={3}
+        className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil"
+        placeholder="An activity idea, help organizing something, day-of setup, whatever it is!"
+      />
+      {error && <p className="text-tomato text-sm font-bold mt-3">{error}</p>}
+      <button
+        type="button"
+        onClick={handleSubmit}
+        disabled={saving}
+        className="w-full bg-basil text-parchment font-bold py-3 rounded-full hover:bg-basilDark transition disabled:opacity-60 mt-4"
+      >
+        {saving ? 'Sending...' : 'Count Me In'}
+      </button>
+    </div>
+  );
 }
 
 export default function Home({ setPage }) {
@@ -19,7 +110,7 @@ export default function Home({ setPage }) {
           Buongiorno,<br />Famiglia!
         </h1>
         <p className="font-body text-lg sm:text-xl text-ink/80 mt-6 max-w-2xl mx-auto">
-          The Palazzari family is heading to the Maine coast — <strong>August 8th&ndash;12th, 2027</strong>.
+          The Palazzari family is heading to the Maine coast — <strong>August 1st&ndash;5th, 2027</strong>.
           Sun, sand, pizza, and way too many cousins in one place. Ci vediamo presto!
         </p>
         <div className="flex flex-wrap gap-3 justify-center mt-9">
@@ -49,27 +140,36 @@ export default function Home({ setPage }) {
         <div className="flex items-center gap-3 mb-6">
           <StampBadge color="text-azzurro">The Itinerary (so far)</StampBadge>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <div className="paper-card rounded-2xl p-5">
-            <p className="font-display font-semibold text-lg text-ink">Night 1</p>
+            <p className="font-display font-semibold text-lg text-ink">Day 1</p>
+            <p className="text-ink/60 text-xs mt-0.5">Sun, Aug 1</p>
             <p className="text-ink/70 text-sm mt-2">Arrival — no dinner planned. Grab a bite on your own and settle in.</p>
           </div>
           <div className="paper-card rounded-2xl p-5">
-            <p className="font-display font-semibold text-lg text-ink">Pizza Night</p>
-            <p className="text-ink/70 text-sm mt-2">One of our two group dinner nights — included, no extra cost.</p>
+            <p className="font-display font-semibold text-lg text-ink">Day 2</p>
+            <p className="text-ink/60 text-xs mt-0.5">Mon, Aug 2</p>
+            <p className="text-ink/70 text-sm mt-2">
+              Pizza Night — a group order from a local pizzeria for anyone interested. There's a cost per
+              person for this one.
+            </p>
           </div>
           <div className="paper-card rounded-2xl p-5">
-            <p className="font-display font-semibold text-lg text-ink">Lobster Bake</p>
-            <p className="text-ink/70 text-sm mt-2">Our other group dinner night — a true Maine classic. Additional cost applies.</p>
+            <p className="font-display font-semibold text-lg text-ink">Day 3</p>
+            <p className="text-ink/60 text-xs mt-0.5">Tue, Aug 3</p>
+            <p className="text-ink/70 text-sm mt-2">Open day — explore, relax, or plan your own dinner.</p>
           </div>
           <div className="paper-card rounded-2xl p-5">
-            <p className="font-display font-semibold text-lg text-ink">Last Night</p>
-            <p className="text-ink/70 text-sm mt-2">Everyone's on their own — explore, relax, or find your favorite spot one more time.</p>
+            <p className="font-display font-semibold text-lg text-ink">Day 4</p>
+            <p className="text-ink/60 text-xs mt-0.5">Wed, Aug 4</p>
+            <p className="text-ink/70 text-sm mt-2">Lobster Bake — our group dinner night, a true Maine classic. Additional cost applies.</p>
+          </div>
+          <div className="paper-card rounded-2xl p-5">
+            <p className="font-display font-semibold text-lg text-ink">Day 5</p>
+            <p className="text-ink/60 text-xs mt-0.5">Thu, Aug 5</p>
+            <p className="text-ink/70 text-sm mt-2">Departure — everyone's on their own to head out or find a favorite spot one more time.</p>
           </div>
         </div>
-        <p className="text-ink/60 text-sm mt-4 italic">
-          Exact order of Pizza Night vs. Lobster Bake still being worked out.
-        </p>
       </section>
 
       {/* Who's doing what */}
@@ -93,20 +193,26 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
+      {/* Volunteer sign-up */}
+      <section className="max-w-5xl mx-auto px-5 pb-16">
+        <StampBadge color="text-azzurro">Want to Help?</StampBadge>
+        <h2 className="font-display font-semibold text-2xl mt-3">Have an Idea? Want to Help Out?</h2>
+        <p className="text-ink/70 mt-2 max-w-2xl">
+          Whether it's an activity idea, a hand organizing something, or just being willing to pitch in day-of —
+          let us know below.
+        </p>
+        <VolunteerSignup />
+      </section>
+
       {/* Dates */}
       <section className="max-w-5xl mx-auto px-5 pb-20">
         <StampBadge color="text-limoncello">Dates</StampBadge>
         <div className="paper-card rounded-2xl p-6 mt-6">
           <p className="text-ink/80">
-            The reunion is set for <strong>August 8th–12th, 2027</strong>. A couple of things
-            affect cost depending on how your own stay lines up:
+            The reunion is set for <strong>August 1st–5th, 2027</strong>.
           </p>
-          <ul className="mt-3 space-y-2 text-ink/80">
-            <li className="flex gap-2"><span className="text-tomato font-bold">•</span> Thursday through Monday raises the cost.</li>
-            <li className="flex gap-2"><span className="text-basil font-bold">•</span> Sunday through Thursday (skipping Saturday) keeps cost lower.</li>
-          </ul>
           <p className="text-ink/60 text-sm mt-4 italic">
-            Now that dates are set, Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
+            Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
             more on that on the Accommodations page.
           </p>
         </div>
