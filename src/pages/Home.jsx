@@ -212,8 +212,7 @@ export default function Home({ setPage }) {
             The reunion is set for <strong>August 1st–5th, 2027</strong>.
           </p>
           <p className="text-ink/60 text-sm mt-4 italic">
-            Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
-            more on that on the Accommodations page.
+            Discounts are being arranged for the The Ocean Sands more on that on the Accommodations page.
           </p>
         </div>
       </section>
