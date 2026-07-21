@@ -14,6 +14,11 @@ const SHEETS = [
     url: 'https://docs.google.com/spreadsheets/d/1wp4DT-1drCFVU1GDlC5Aiy10N3KRKcD6lu9LGr6QwcY/edit',
     icon: '👕',
   },
+    {
+    name: 'Volunteer Responses',
+    url: 'https://docs.google.com/spreadsheets/d/1U8EdvE__WywExTvQWNV7UiNHcTAwxrt4AqbRqRAcf5c/edit?resourcekey=&gid=1804156388#gid=1804156388',
+    icon: '☻',
+  },
 ];
 
 export default function Organizers() {
