@@ -75,7 +75,7 @@ function VolunteerSignup() {
         value={name}
         onChange={(e) => setName(e.target.value)}
         className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil mb-4"
-        placeholder="e.g. Maria Palazzari"
+        placeholder="e.g. Maria Cecconi"
       />
       <label className="block text-sm font-bold text-ink mb-1">Have an idea, or want to help?</label>
       <textarea
