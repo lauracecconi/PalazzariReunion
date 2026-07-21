@@ -162,18 +162,18 @@ export default function Home({ setPage }) {
             <p className="text-ink/60 text-xs mt-0.5">Mon, Aug 2</p>
             <p className="text-ink/70 text-sm mt-2">
               Pizza Pool Party — a group order from a local pizzeria for anyone interested, hanging out
-              by the pool. There's a cost per person for this one.
+              by the pool. Additional cost applies.
             </p>
           </div>
           <div className="paper-card rounded-2xl p-5">
             <p className="font-display font-semibold text-lg text-ink">Day 3</p>
             <p className="text-ink/60 text-xs mt-0.5">Tue, Aug 3</p>
-            <p className="text-ink/70 text-sm mt-2">Open day — explore, relax, or plan your own dinner.</p>
+            <p className="text-ink/70 text-sm mt-2">Lobster Bake — our group dinner night, a true Maine classic. Additional cost applies.</p>
           </div>
           <div className="paper-card rounded-2xl p-5">
             <p className="font-display font-semibold text-lg text-ink">Day 4</p>
             <p className="text-ink/60 text-xs mt-0.5">Wed, Aug 4</p>
-            <p className="text-ink/70 text-sm mt-2">Lobster Bake — our group dinner night, a true Maine classic. Additional cost applies.</p>
+            <p className="text-ink/70 text-sm mt-2">Open day — explore, relax, or plan your own dinner. </p>
           </div>
           <div className="paper-card rounded-2xl p-5">
             <p className="font-display font-semibold text-lg text-ink">Day 5</p>
