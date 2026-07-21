@@ -75,7 +75,7 @@ function VolunteerSignup() {
         value={name}
         onChange={(e) => setName(e.target.value)}
         className="w-full border-2 border-ink/15 rounded-xl px-4 py-2.5 focus:outline-none focus:border-basil mb-4"
-        placeholder="e.g. Vito Corleone"
+        placeholder="e.g. Brad Cecconi"
       />
       <label className="block text-sm font-bold text-ink mb-1">Have an idea, or want to help?</label>
       <textarea
@@ -223,7 +223,7 @@ export default function Home({ setPage }) {
             The reunion is set for <strong>August 1st–5th, 2027</strong>.
           </p>
           <p className="text-ink/60 text-sm mt-4 italic">
-            Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
+            Jule and Lili will call The Ocean Sands directly as the "Palazzari Reunion" —
             more on that on the Accommodations page.
           </p>
         </div>
