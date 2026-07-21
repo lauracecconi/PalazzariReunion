@@ -161,8 +161,8 @@ export default function Home({ setPage }) {
             <p className="font-display font-semibold text-lg text-ink">Day 2</p>
             <p className="text-ink/60 text-xs mt-0.5">Mon, Aug 2</p>
             <p className="text-ink/70 text-sm mt-2">
-              Pizza Night — a group order from a local pizzeria for anyone interested. There's a cost per
-              person for this one.
+              Pizza Pool Party — a group order from a local pizzeria for anyone interested, hanging out
+              by the pool. There's a cost per person for this one.
             </p>
           </div>
           <div className="paper-card rounded-2xl p-5">
@@ -223,7 +223,8 @@ export default function Home({ setPage }) {
             The reunion is set for <strong>August 1st–5th, 2027</strong>.
           </p>
           <p className="text-ink/60 text-sm mt-4 italic">
-            Discounts are being arranged for the The Ocean Sands more on that on the Accommodations page.
+            Jule and I will call The Ocean Sands directly as the "Palazzari Reunion" —
+            more on that on the Accommodations page.
           </p>
         </div>
       </section>

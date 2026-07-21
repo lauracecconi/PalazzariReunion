@@ -40,16 +40,6 @@ export default function Accommodations() {
         Everyone books their own hotel, cottage, or condo — here's what we've scouted so far.
       </p>
 
-      {/* Booking instructions banner */}
-      <div className="paper-card rounded-2xl p-6 mt-8 border-l-4 border-tomato">
-        <p className="font-display font-semibold text-lg text-tomato">Book by phone, not online</p>
-        <p className="text-ink/80 mt-2">
-          When it's time to reserve, please call the hotel directly rather than booking online. Once dates are
-          settled, Jule and I will call The Ocean Sands first and let them know we're the <strong>Palazzari Reunion</strong>.
-          When you call, mention the same thing — they'll know to group our rooms together as much as they can.
-        </p>
-      </div>
-
       {/* Option 1: Ocean Sands */}
       <div className="mt-10">
         <span className="postmark text-basil">Option 1</span>
@@ -83,10 +73,6 @@ export default function Accommodations() {
             depending on dates and room type. <strong>Check the website for exact rooms and current pricing</strong> —
             it changes by season and room type.
           </p>
-          <p className="text-basil font-bold mt-3">
-            🎉 Confirmed: The Ocean Sands is giving our group a 10% discount when you call in to book — just
-            mention you're with the Palazzari Reunion.
-          </p>
           <a
             href="https://www.oceansandsyorkbeach.com/"
             target="_blank"
@@ -107,6 +93,21 @@ export default function Accommodations() {
           but <strong>Short Sands Beach</strong> is close by too and sits closer to the shops, arcade, and downtown action —
           worth a look if you'd rather be in the middle of things.
         </p>
+      </div>
+
+      {/* Illustrated area map */}
+      <div className="mt-12">
+        <span className="postmark text-tomato">The York Beach Map</span>
+        <p className="text-ink/70 mt-3 max-w-2xl">
+          A handy illustrated map of the area — restaurants, beaches, shops, and walking distances from The Ocean Sands, all in one place.
+        </p>
+        <div className="paper-card rounded-2xl overflow-hidden mt-5">
+          <img
+            src="/york-beach-area-map.jpg"
+            alt="Illustrated map of York Beach, Maine with restaurants, shops, beaches, and walking distances from The Ocean Sands"
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       {/* Map */}

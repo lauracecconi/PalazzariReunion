@@ -101,7 +101,7 @@ export default function DinnerRSVP() {
       <span className="postmark text-tomato">Dinner Nights</span>
       <h1 className="font-display italic font-semibold text-4xl text-tomato mt-4">RSVP</h1>
       <p className="text-ink/70 mt-3">
-        Let us know who's coming to Pizza Night and the Lobster Bake, so we can plan for the right numbers.
+        Let us know who's coming to the Pizza Pool Party and the Lobster Bake, so we can plan for the right numbers.
       </p>
 
       <div className="paper-card rounded-2xl p-6 mt-8">
@@ -151,8 +151,8 @@ export default function DinnerRSVP() {
 
             <div className="flex items-center justify-between border-2 border-ink/10 rounded-xl p-4 mb-3">
               <div>
-                <p className="font-bold text-sm">Pizza Night</p>
-                <p className="text-xs text-ink/60">Group order from a local pizzeria — cost per person applies</p>
+                <p className="font-bold text-sm">Pizza Pool Party (Monday)</p>
+                <p className="text-xs text-ink/60">Group order from a local pizzeria by the pool — cost per person applies</p>
               </div>
               <input
                 type="checkbox"
@@ -164,7 +164,7 @@ export default function DinnerRSVP() {
 
             <div className="flex items-center justify-between border-2 border-ink/10 rounded-xl p-4 mb-4">
               <div>
-                <p className="font-bold text-sm">Lobster Bake</p>
+                <p className="font-bold text-sm">Lobster Bake (Wednesday)</p>
                 <p className="text-xs text-ink/60">Additional cost applies</p>
               </div>
               <input
