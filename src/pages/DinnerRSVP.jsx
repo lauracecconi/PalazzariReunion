@@ -151,7 +151,7 @@ export default function DinnerRSVP() {
 
             <div className="flex items-center justify-between border-2 border-ink/10 rounded-xl p-4 mb-3">
               <div>
-                <p className="font-bold text-sm">Pizza Pool Party (Monday)</p>
+                <p className="font-bold text-sm">Pizza Pool Party</p>
                 <p className="text-xs text-ink/60">Group order from a local pizzeria by the pool — cost per person applies</p>
               </div>
               <input
@@ -164,7 +164,7 @@ export default function DinnerRSVP() {
 
             <div className="flex items-center justify-between border-2 border-ink/10 rounded-xl p-4 mb-4">
               <div>
-                <p className="font-bold text-sm">Lobster Bake (Wednesday)</p>
+                <p className="font-bold text-sm">Lobster Bake</p>
                 <p className="text-xs text-ink/60">Additional cost applies</p>
               </div>
               <input
