@@ -106,6 +106,119 @@ function VolunteerSignup() {
   );
 }
 
+function WinnyVinnyAd() {
+  return (
+    <div
+      style={{
+        fontFamily: "'Comic Sans MS', 'Comic Sans', cursive",
+        width: '100%',
+        maxWidth: 420,
+        margin: '0 auto',
+        background: '#f2ead6',
+        border: '4px double #8a7a5c',
+        padding: 10,
+        textAlign: 'center',
+        boxShadow: '0 0 0 2px #000, 4px 4px 0 2px rgba(0,0,0,0.2)',
+        boxSizing: 'border-box',
+      }}
+    >
+      <div
+        style={{
+          background: '#6b5b95',
+          color: 'white',
+          fontWeight: 'bold',
+          fontSize: 10,
+          padding: 3,
+          textShadow: '1px 1px 0 #000',
+          letterSpacing: 0.5,
+        }}
+      >
+        ★彡 YOU HAVE BEEN SELECTED 彡★ CONGRATULATIONS FAMILY MEMBER 彡★
+      </div>
+
+      <h3 style={{ fontSize: 20, color: '#a33f3f', textShadow: '1.5px 1.5px 0 #e0d4b3', margin: '8px 0 3px' }}>
+        ⛷️⛳ WINNYVINNY ⛳⛷️
+      </h3>
+      <div style={{ fontSize: 14, letterSpacing: 4 }}>✦ ✧ ✦ ✧ ✦</div>
+
+      <p style={{ fontSize: 11, margin: '6px 0' }}>
+        <b>Cousin Vinny Jr</b> made a WHOLE GAME WEBSITE and it is <i>FREE</i> to visit!!
+        <br />
+        Arcade games, mini golf, skiing, and more!! No download required!!*
+      </p>
+
+      <p style={{ fontSize: 9, margin: '2px 0 6px', color: '#555' }}>
+        This reunion website is brought to you by Winny Vinny
+      </p>
+
+      <span style={{ display: 'inline-block', background: '#a33f3f', color: '#f2ead6', fontWeight: 'bold', fontSize: 9, padding: '2px 6px', border: '1.5px solid #000', margin: 3 }}>NEW!!</span>
+      <span style={{ display: 'inline-block', background: '#a33f3f', color: '#f2ead6', fontWeight: 'bold', fontSize: 9, padding: '2px 6px', border: '1.5px solid #000', margin: 3 }}>GROWING</span>
+      <span style={{ display: 'inline-block', background: '#a33f3f', color: '#f2ead6', fontWeight: 'bold', fontSize: 9, padding: '2px 6px', border: '1.5px solid #000', margin: 3 }}>99% AWESOME</span>
+
+      <div
+        style={{
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+          background: '#000',
+          color: '#7fdc7f',
+          fontSize: 11,
+          padding: '4px 0',
+          margin: '8px 0',
+          borderTop: '1.5px dashed #6b5b95',
+          borderBottom: '1.5px dashed #6b5b95',
+        }}
+      >
+        <span style={{ display: 'inline-block', paddingLeft: '100%', animation: 'winnyvinny-marquee 22s linear infinite' }}>
+          *** REUNION EXCLUSIVE *** FREE ARCADE GAMES *** MINI GOLF, SKIING, AND MORE ***
+          BEAT YOUR COUSINS' HIGH SCORES *** NEW GAMES ADDED AS COUSIN VINNY JR MAKES THEM ***
+          CHECK BACK OFTEN ***
+        </span>
+      </div>
+
+      <div style={{ display: 'inline-block', background: '#000', color: '#0f0', fontFamily: "'Courier New', monospace", fontSize: 12, padding: '3px 8px', letterSpacing: 2, border: '1.5px inset #888', margin: '6px 0' }}>
+        VISITORS: 000042
+      </div>
+      <br />
+
+      <a
+        href="https://winnyvinny.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-block',
+          background: '#8fae7d',
+          border: '3px outset #6b8a5a',
+          color: '#1a2e12',
+          fontWeight: 'bold',
+          fontSize: 14,
+          padding: '7px 18px',
+          margin: '8px 0 4px',
+          textDecoration: 'none',
+        }}
+      >
+        ▶ CLICK HERE TO VISIT SITE ◀
+      </a>
+
+      <div style={{ fontSize: 9, marginTop: 4, color: '#9c6b2e', fontWeight: 'bold' }}>
+        🚧 this website is under construction 🚧
+      </div>
+
+      <p style={{ fontSize: 7, color: '#444', marginTop: 8, fontFamily: 'Arial, sans-serif' }}>
+        *Results not guaranteed. Side effects may include bragging rights at next year's
+        reunion, mild competitiveness, and asking "one more round" four more times. Void
+        where prohibited by Nonna.
+      </p>
+
+      <style>{`
+        @keyframes winnyvinny-marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export default function Home({ setPage }) {
   return (
     <div>
@@ -226,6 +339,11 @@ export default function Home({ setPage }) {
             The Ocean Sands will be the main hub for the "Palazzari Reunion" —  but there are plenty of other options for places to stay.  More on that on the Accommodations page.
           </p>
         </div>
+      </section>
+
+      {/* A little fun, sponsored by the next generation */}
+      <section className="max-w-5xl mx-auto px-5 pb-16">
+        <WinnyVinnyAd />
       </section>
     </div>
   );
