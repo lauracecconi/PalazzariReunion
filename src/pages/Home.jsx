@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import RollCallTicker from '../components/RollCallTicker.jsx';
 
 function StampBadge({ children, color = 'text-tomato' }) {
   return <span className={`postmark ${color}`}>{children}</span>;
@@ -239,6 +240,12 @@ export default function Home({ setPage }) {
         </p>
         <div className="flex flex-wrap gap-3 justify-center mt-9">
           <button
+            onClick={() => setPage('whoscoming')}
+            className="bg-basil text-parchment font-body font-bold px-6 py-3 rounded-full hover:bg-basilDark transition"
+          >
+            🙋 I'm Coming!
+          </button>
+          <button
             onClick={() => setPage('dinner')}
             className="bg-tomato text-parchment font-body font-bold px-6 py-3 rounded-full hover:bg-tomatoDark transition"
           >
@@ -246,7 +253,7 @@ export default function Home({ setPage }) {
           </button>
           <button
             onClick={() => setPage('tshirts')}
-            className="bg-basil text-parchment font-body font-bold px-6 py-3 rounded-full hover:bg-basilDark transition"
+            className="bg-white text-ink border-2 border-ink/15 font-body font-bold px-6 py-3 rounded-full hover:bg-ink/5 transition"
           >
             Order a T-Shirt
           </button>
@@ -256,6 +263,10 @@ export default function Home({ setPage }) {
           >
             Where to Stay
           </button>
+        </div>
+
+        <div className="max-w-lg mx-auto mt-8">
+          <RollCallTicker variant="compact" />
         </div>
       </section>
 
