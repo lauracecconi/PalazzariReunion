@@ -5,6 +5,11 @@ const ORGANIZER_PASSWORD = 'Palazzari2027';
 
 const SHEETS = [
   {
+    name: 'Who's coming',
+    url: 'https://docs.google.com/spreadsheets/d/12eQBrdz7uuY2FtEEcBvJgbRKYKq9DXOcDavBpegSxs0/edit?resourcekey=&gid=1408738592#gid=1408738592',
+    icon: '',
+  },
+  {
     name: 'Dinner RSVP Responses',
     url: 'https://docs.google.com/spreadsheets/d/1oqt9ZMbc2tXytKh7ehLIJVSl6qdghAiMu6Oqz4kxaNs/edit',
     icon: '🍝',
