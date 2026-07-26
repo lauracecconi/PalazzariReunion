@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './components/NavBar.jsx';
 import Home from './pages/Home.jsx';
+import WhosComing from './pages/WhosComing.jsx';
 import Accommodations from './pages/Accommodations.jsx';
 import DinnerRSVP from './pages/DinnerRSVP.jsx';
 import TShirtOrder from './pages/TShirtOrder.jsx';
@@ -16,6 +17,7 @@ export default function App() {
       <NavBar page={page} setPage={setPage} />
       <main>
         {page === 'home' && <Home setPage={setPage} />}
+        {page === 'whoscoming' && <WhosComing />}
         {page === 'accommodations' && <Accommodations />}
         {page === 'dinner' && <DinnerRSVP />}
         {page === 'tshirts' && <TShirtOrder />}
