@@ -225,7 +225,7 @@ export default function Home({ setPage }) {
     <div>
       {/* Draft notice */}
       <div className="bg-limoncello/25 border-b-2 border-limoncello/60 text-center py-2 px-4 text-sm font-body font-bold text-ink">
-        🚧 Dates are locked in — a few other details (final pricing, exact dinner order) still being finalized.
+        🚧 Looking forward to seeing everyone!  Please take a minute to let everyone know you are coming.  The Ocean Sands is already accepting reservations!.
       </div>
 
       {/* Hero */}
