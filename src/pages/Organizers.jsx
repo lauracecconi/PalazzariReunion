@@ -5,7 +5,7 @@ const ORGANIZER_PASSWORD = 'Palazzari2027';
 
 const SHEETS = [
   {
-    name: 'Who's coming',
+    name: 'Who is coming',
     url: 'https://docs.google.com/spreadsheets/d/12eQBrdz7uuY2FtEEcBvJgbRKYKq9DXOcDavBpegSxs0/edit?resourcekey=&gid=1408738592#gid=1408738592',
     icon: '',
   },
