@@ -17,6 +17,14 @@ const NEARBY = [
   { name: 'Portsmouth, NH', time: '20 min', dir: 'south', lat: 43.0702046, lng: -70.7546771 },
   { name: 'Hampton Beach, NH', time: '30 min', dir: 'south', lat: 42.9113098, lng: -70.8134818 },
   { name: 'Boston, MA', time: '75 min', dir: 'south', lat: 42.3555076, lng: -71.0565364 },
+  { name: 'Take Flight Aerial Adventure Course, Kittery', time: '12 min', dir: 'south', lat: 43.12949, lng: -70.705368 },
+];
+
+const GROCERIES = [
+  { name: 'Aldi (Seabrook, NH)', blurb: 'On your way in — right off Exit 1 in Seabrook, NH.', lat: 42.891914, lng: -70.868752 },
+  { name: 'Hannaford Supermarket', blurb: 'Full grocery store, about 1.5 miles from The Ocean Sands.', lat: 43.1523462, lng: -70.6688529 },
+  { name: "Anthony's Food Shop", blurb: 'Gas station, bakery, coffee, deli & convenience store — about 3.5 miles away.', lat: 43.1597061, lng: -70.6503419 },
+  { name: "Mimmo's Italian Restaurant", blurb: 'Cozy Italian spot just 0.3 miles down the road — a 6-minute walk.', lat: 43.160995, lng: -70.62124 },
 ];
 
 const KEY_SPOTS = [
@@ -142,6 +150,25 @@ export default function Accommodations() {
         <span className="postmark text-tomato">Right in York — No Driving Required</span>
         <div className="grid sm:grid-cols-2 gap-3 mt-5">
           {IN_YORK.map((spot) => (
+            <a
+              key={spot.name}
+              href={mapsLink(spot.lat, spot.lng)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="paper-card rounded-xl p-4 hover:bg-ink/5 transition"
+            >
+              <p className="font-body font-bold text-sm">📍 {spot.name}</p>
+              <p className="text-xs text-ink/60 mt-1">{spot.blurb}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Groceries & nearby food */}
+      <div className="mt-12">
+        <span className="postmark text-limoncello">Groceries &amp; Nearby Food</span>
+        <div className="grid sm:grid-cols-2 gap-3 mt-5">
+          {GROCERIES.map((spot) => (
             <a
               key={spot.name}
               href={mapsLink(spot.lat, spot.lng)}
